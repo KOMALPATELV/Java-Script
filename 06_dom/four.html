@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatiable" 
     content="IE=edge">
@@ -8,8 +6,7 @@
     content="width=device-width, initial-scale=1.0">
     <title>DOM | Chai aur code</title>
 </head>
-<body style="background-color: #212121; color: #fff;">
-
+<body style="background-color: #white";>
     <ul class="language">
         <li>javascript</li>
         </ul>
@@ -23,8 +20,28 @@
     }
     addLanguage("python")
     addLanguage("typescript")
-</script>
-<style>
 
+    function addOptiLanguage(language){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('langauage').appendChild(li)
+    }
+    addOptiLanguage('golang')
+
+    //Edit
+    const secondLang = document.querySelector("li:nth-child(2)")
+    //secondLang.innerHTML = "MoJo"
+    const newli = document.createElement(li)
+    newli.textContent = "MoJo"
+    secondLang.replaceWith(newli)
+
+    //edit
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = <li>TypeScript</li>
+
+    //remove
+    const lastLAng = document.querySelector('li:last-child')
+    lastLang.remove()
+    
 </style>
 </html>
